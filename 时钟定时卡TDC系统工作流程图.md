@@ -156,7 +156,7 @@ sequenceDiagram
 flowchart TD
     START([输入信号边沿]) --> HRCLK{高分辨率时钟域}
     
-    HRCLK --> SHIFT1[移位寄存器采样<br/>shift_reg <= shift_reg[N-2:0] & input]
+    HRCLK --> SHIFT1[移位寄存器采样<br/>shift_reg <= shift_reg N-2:0  & input]
     SHIFT1 --> SHIFT2[连续移位记录<br/>记录信号状态变化]
     
     SHIFT2 --> SYNC[同步到系统时钟域<br/>TimestampSysClk_EvtShiftReg <= TimestampSysClkNx_EvtShiftReg]
